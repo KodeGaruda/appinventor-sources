@@ -9,9 +9,11 @@ title: Layout
 Table of Contents:
 
 * [HorizontalArrangement](#HorizontalArrangement)
+* [HorizontalRadioGroup](#HorizontalRadioGroup)
 * [HorizontalScrollArrangement](#HorizontalScrollArrangement)
 * [TableArrangement](#TableArrangement)
 * [VerticalArrangement](#VerticalArrangement)
+* [VerticalRadioGroup](#VerticalRadioGroup)
 * [VerticalScrollArrangement](#VerticalScrollArrangement)
 
 ## HorizontalArrangement  {#HorizontalArrangement}
@@ -58,7 +60,7 @@ Table of Contents:
 
 {:id="HorizontalArrangement.AlignVertical" .number} *AlignVertical*
 : A number that encodes how the contents of the `HorizontalArrangement` are aligned vertically. The choices
- are: `1` = aligned at the top, `2` = aligned at the bottom, `3` = vertically centered.
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
  Alignment has no effect if the `HorizontalArrangement`'s [`Height`](#HorizontalArrangement.Height) is `Automatic`.
 
 {:id="HorizontalArrangement.BackgroundColor" .color} *BackgroundColor*
@@ -99,6 +101,63 @@ None
 None
 
 
+## HorizontalRadioGroup  {#HorizontalRadioGroup}
+
+Component for HorizontalRadioGroup
+
+
+
+### Properties  {#HorizontalRadioGroup-Properties}
+
+{:.properties}
+
+{:id="HorizontalRadioGroup.AlignHorizontal" .number} *AlignHorizontal*
+: A number that encodes how contents of the `HorizontalRadioGroup` are aligned horizontally. The choices
+ are: `1` = left aligned, `2` = right aligned, `3` = horizontally centered. Alignment has no
+ effect if the `HorizontalRadioGroup`'s [`Width`](#HorizontalRadioGroup.Width) is `Automatic`.
+
+{:id="HorizontalRadioGroup.AlignVertical" .number} *AlignVertical*
+: A number that encodes how the contents of the `HorizontalRadioGroup` are aligned vertically. The choices
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
+ Alignment has no effect if the `HorizontalRadioGroup`'s [`Height`](#HorizontalRadioGroup.Height) is `Automatic`.
+
+{:id="HorizontalRadioGroup.BackgroundColor" .color} *BackgroundColor*
+: Specifies the background color of the HorizontalRadioGroup as an alpha-red-green-blue
+ integer.
+
+{:id="HorizontalRadioGroup.Height" .number .bo} *Height*
+: Specifies the `HorizontalRadioGroup`'s vertical height, measured in pixels.
+
+{:id="HorizontalRadioGroup.HeightPercent" .number .wo .bo} *HeightPercent*
+: Specifies the `HorizontalRadioGroup`'s vertical height as a percentage
+ of the [`Screen`'s `Height`](userinterface.html#Screen.Height).
+
+{:id="HorizontalRadioGroup.Image" .text} *Image*
+: Specifies the path of the background image of the `HorizontalRadioGroup`.
+
+{:id="HorizontalRadioGroup.Visible" .boolean} *Visible*
+: Specifies whether the `HorizontalRadioGroup` should be visible on the screen.  Value is `true`{:.logic.block}
+ if the `HorizontalRadioGroup` is showing and `false`{:.logic.block} if hidden.
+
+{:id="HorizontalRadioGroup.Width" .number .bo} *Width*
+: Specifies the horizontal width of the `HorizontalRadioGroup`, measured in pixels.
+
+{:id="HorizontalRadioGroup.WidthPercent" .number .wo .bo} *WidthPercent*
+: Specifies the horizontal width of the `HorizontalRadioGroup` as a percentage
+ of the [`Screen`'s `Width`](userinterface.html#Screen.Width).
+
+### Events  {#HorizontalRadioGroup-Events}
+
+{:.events}
+None
+
+
+### Methods  {#HorizontalRadioGroup-Methods}
+
+{:.methods}
+None
+
+
 ## HorizontalScrollArrangement  {#HorizontalScrollArrangement}
 
 A formatting element in which to place components that should be displayed from left to right.
@@ -120,7 +179,7 @@ A formatting element in which to place components that should be displayed from 
 
 {:id="HorizontalScrollArrangement.AlignVertical" .number} *AlignVertical*
 : A number that encodes how the contents of the `HorizontalScrollArrangement` are aligned vertically. The choices
- are: `1` = aligned at the top, `2` = aligned at the bottom, `3` = vertically centered.
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
  Alignment has no effect if the `HorizontalScrollArrangement`'s [`Height`](#HorizontalScrollArrangement.Height) is `Automatic`.
 
 {:id="HorizontalScrollArrangement.BackgroundColor" .color} *BackgroundColor*
@@ -270,7 +329,7 @@ None
 
 {:id="VerticalArrangement.AlignVertical" .number} *AlignVertical*
 : A number that encodes how the contents of the `VerticalArrangement` are aligned vertically. The choices
- are: `1` = aligned at the top, `2` = aligned at the bottom, `3` = vertically centered.
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
  Alignment has no effect if the `VerticalArrangement`'s [`Height`](#VerticalArrangement.Height) is `Automatic`.
 
 {:id="VerticalArrangement.BackgroundColor" .color} *BackgroundColor*
@@ -311,6 +370,63 @@ None
 None
 
 
+## VerticalRadioGroup  {#VerticalRadioGroup}
+
+Component for VerticalRadioGroup
+
+
+
+### Properties  {#VerticalRadioGroup-Properties}
+
+{:.properties}
+
+{:id="VerticalRadioGroup.AlignHorizontal" .number} *AlignHorizontal*
+: A number that encodes how contents of the `VerticalRadioGroup` are aligned horizontally. The choices
+ are: `1` = left aligned, `2` = right aligned, `3` = horizontally centered. Alignment has no
+ effect if the `VerticalRadioGroup`'s [`Width`](#VerticalRadioGroup.Width) is `Automatic`.
+
+{:id="VerticalRadioGroup.AlignVertical" .number} *AlignVertical*
+: A number that encodes how the contents of the `VerticalRadioGroup` are aligned vertically. The choices
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
+ Alignment has no effect if the `VerticalRadioGroup`'s [`Height`](#VerticalRadioGroup.Height) is `Automatic`.
+
+{:id="VerticalRadioGroup.BackgroundColor" .color} *BackgroundColor*
+: Specifies the background color of the VerticalRadioGroup as an alpha-red-green-blue
+ integer.
+
+{:id="VerticalRadioGroup.Height" .number .bo} *Height*
+: Specifies the `VerticalRadioGroup`'s vertical height, measured in pixels.
+
+{:id="VerticalRadioGroup.HeightPercent" .number .wo .bo} *HeightPercent*
+: Specifies the `VerticalRadioGroup`'s vertical height as a percentage
+ of the [`Screen`'s `Height`](userinterface.html#Screen.Height).
+
+{:id="VerticalRadioGroup.Image" .text} *Image*
+: Specifies the path of the background image of the `VerticalRadioGroup`.
+
+{:id="VerticalRadioGroup.Visible" .boolean} *Visible*
+: Specifies whether the `VerticalRadioGroup` should be visible on the screen.  Value is `true`{:.logic.block}
+ if the `VerticalRadioGroup` is showing and `false`{:.logic.block} if hidden.
+
+{:id="VerticalRadioGroup.Width" .number .bo} *Width*
+: Specifies the horizontal width of the `VerticalRadioGroup`, measured in pixels.
+
+{:id="VerticalRadioGroup.WidthPercent" .number .wo .bo} *WidthPercent*
+: Specifies the horizontal width of the `VerticalRadioGroup` as a percentage
+ of the [`Screen`'s `Width`](userinterface.html#Screen.Width).
+
+### Events  {#VerticalRadioGroup-Events}
+
+{:.events}
+None
+
+
+### Methods  {#VerticalRadioGroup-Methods}
+
+{:.methods}
+None
+
+
 ## VerticalScrollArrangement  {#VerticalScrollArrangement}
 
 A formatting element in which to place components that should be displayed one below another.
@@ -332,7 +448,7 @@ A formatting element in which to place components that should be displayed one b
 
 {:id="VerticalScrollArrangement.AlignVertical" .number} *AlignVertical*
 : A number that encodes how the contents of the `VerticalScrollArrangement` are aligned vertically. The choices
- are: `1` = aligned at the top, `2` = aligned at the bottom, `3` = vertically centered.
+ are: `1` = aligned at the top, `2` = vertically centered, `3` = aligned at the bottom.
  Alignment has no effect if the `VerticalScrollArrangement`'s [`Height`](#VerticalScrollArrangement.Height) is `Automatic`.
 
 {:id="VerticalScrollArrangement.BackgroundColor" .color} *BackgroundColor*

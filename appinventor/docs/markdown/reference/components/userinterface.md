@@ -17,6 +17,7 @@ Table of Contents:
 * [ListView](#ListView)
 * [Notifier](#Notifier)
 * [PasswordTextBox](#PasswordTextBox)
+* [RadioButton](#RadioButton)
 * [Screen](#Screen)
 * [Slider](#Slider)
 * [Spinner](#Spinner)
@@ -361,6 +362,9 @@ Component for displaying images and basic animations.
 ### Properties  {#Image-Properties}
 
 {:.properties}
+
+{:id="Image.AlternateText" .text .wo} *AlternateText*
+: A written description of what the image looks like.
 
 {:id="Image.Animation" .text .wo .bo} *Animation*
 : This is a limited form of animation that can attach a small number of motion types to images.
@@ -927,6 +931,92 @@ Users enter passwords in a password text box component, which hides the text tha
 {:id="PasswordTextBox.RequestFocus" class="method"} <i/> RequestFocus()
 : Request focus to current `PasswordTextBox`.
 
+## RadioButton  {#RadioButton}
+
+![Example of a RadioButton](images/radiobutton.png)
+
+ `RadioButton` components can detect user taps and can change their boolean state in response.
+
+ A `RadioButton` component raises an event when the user taps it. There are many properties affecting
+ its appearance that can be set in the Designer or Blocks Editor.
+
+
+
+### Properties  {#RadioButton-Properties}
+
+{:.properties}
+
+{:id="RadioButton.BackgroundColor" .color} *BackgroundColor*
+: Specifies the background color of the `RadioButton` as an alpha-red-green-blue
+ integer.
+
+{:id="RadioButton.Checked" .boolean} *Checked*
+: Set to `true`{:.logic.block} if the button is checked, `false`{:.logic.block} otherwise.
+
+{:id="RadioButton.Enabled" .boolean} *Enabled*
+: Specifies whether the `RadioButton` should be active and clickable.
+
+{:id="RadioButton.FontBold" .boolean .do} *FontBold*
+: Specifies whether the text of the `RadioButton` should be bold.
+ Some fonts do not support bold.
+
+{:id="RadioButton.FontItalic" .boolean .do} *FontItalic*
+: Specifies whether the text of the `RadioButton` should be italic.
+ Some fonts do not support italic.
+
+{:id="RadioButton.FontSize" .number} *FontSize*
+: Specifies the text font size of the `RadioButton`, measured in sp(scale-independent pixels).
+
+{:id="RadioButton.FontTypeface" .number .do} *FontTypeface*
+: Specifies the text font face of the `RadioButton` as default, serif, sans
+ serif, or monospace.
+
+{:id="RadioButton.Height" .number .bo} *Height*
+: Specifies the `RadioButton`'s vertical height, measured in pixels.
+
+{:id="RadioButton.HeightPercent" .number .wo .bo} *HeightPercent*
+: Specifies the `RadioButton`'s vertical height as a percentage
+ of the [`Screen`'s `Height`](userinterface.html#Screen.Height).
+
+{:id="RadioButton.Text" .text} *Text*
+: Specifies the text displayed by the `RadioButton`.
+
+{:id="RadioButton.TextColor" .color} *TextColor*
+: Specifies the text color of the `RadioButton` as an alpha-red-green-blue
+ integer.
+
+{:id="RadioButton.Visible" .boolean} *Visible*
+: Specifies whether the `RadioButton` should be visible on the screen.  Value is `true`{:.logic.block}
+ if the `RadioButton` is showing and `false`{:.logic.block} if hidden.
+
+{:id="RadioButton.Width" .number .bo} *Width*
+: Specifies the horizontal width of the `RadioButton`, measured in pixels.
+
+{:id="RadioButton.WidthPercent" .number .wo .bo} *WidthPercent*
+: Specifies the horizontal width of the `RadioButton` as a percentage
+ of the [`Screen`'s `Width`](userinterface.html#Screen.Width).
+
+### Events  {#RadioButton-Events}
+
+{:.events}
+
+{:id="RadioButton.Changed"} Changed()
+: User tapped and released the `RadioButton`.
+
+{:id="RadioButton.GotFocus"} GotFocus()
+: `RadioButton` became the focused component.
+
+{:id="RadioButton.LostFocus"} LostFocus()
+: `RadioButton` stopped being the focused component.
+
+### Methods  {#RadioButton-Methods}
+
+{:.methods}
+
+{:id="RadioButton.Toggle" class="method"} <i/> Toggle()
+: If the radio button is already checked, 
+ this method will not toggle the radio button.
+
 ## Screen  {#Screen}
 
 Top-level component containing all other components in the program.
@@ -949,7 +1039,7 @@ Top-level component containing all other components in the program.
 
 {:id="Screen.AlignHorizontal" .number} *AlignHorizontal*
 : A number that encodes how contents of the screen are aligned horizontally. The choices are:
- `1` (left aligned), `2` (horizontally centered), `3` (right aligned).
+ `1` (left aligned), `3` (horizontally centered), `2` (right aligned).
 
 {:id="Screen.AlignVertical" .number} *AlignVertical*
 : A number that encodes how the contents of the arrangement are aligned vertically. The choices
@@ -969,6 +1059,9 @@ Top-level component containing all other components in the program.
 : Specifies the path of the `Screen`'s background image. If there is both an `BackgroundImage`
  and a [`BackgroundColor`](#Screen.BackgroundColor) specified, only the `BackgroundImage` will be visible.
 
+{:id="Screen.BigDefaultText" .boolean} *BigDefaultText*
+: When checked, all default size text will be increased in size.
+
 {:id="Screen.BlocksToolkit" .text .wo .do} *BlocksToolkit*
 : A JSON string representing the subset for the screen. Authors of template apps can use this to control what components, designer properties, and blocks are available in the project.
 
@@ -979,14 +1072,16 @@ Top-level component containing all other components in the program.
 {:id="Screen.Height" .number .ro .bo} *Height*
 : Returns the Screen height in pixels (y-size).
 
+{:id="Screen.HighContrast" .boolean} *HighContrast*
+: When checked, there will be high contrast mode turned on.
+
 {:id="Screen.Icon" .text .wo .do} *Icon*
 : The image used for your App's display icon should be a square png or jpeg image with dimensions
  up to 1024x1024 pixels. Larger images may cause compiling or installing the app to fail.
  The build server will generate images of standard dimensions for Android devices.
 
 {:id="Screen.OpenScreenAnimation" .text} *OpenScreenAnimation*
-: The animation for switching to another screen. Valid options are `default`, `fade`, `zoom`,
- `slidehorizontal`, `slidevertical`, and `none`.
+: Sets the animation type for the transition of this form opening.
 
 {:id="Screen.Platform" .text .ro .bo} *Platform*
 : Gets the name of the underlying platform running the app. Currently, this is the text
